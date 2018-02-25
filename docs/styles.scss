@@ -1,0 +1,144 @@
+$fa-font-path: '../node_modules/font-awesome/fonts';
+@import '../node_modules/font-awesome/scss/font-awesome';
+
+$FontPathOpenSans: "../node_modules/npm-font-open-sans/fonts";
+@import '../node_modules/npm-font-open-sans/open-sans';
+
+@import 'cashmere';
+
+html,
+body {
+    margin: 0;
+    background-color: $white;
+    color: $text;
+    height: 100%;
+}
+
+body {
+    // navbar spacing
+    padding-top: 53px;
+}
+
+.demo-content {
+    width: 90%;
+    max-width: 1000px;
+    min-width: 700px;
+    margin: 0 auto;
+    padding: 0 30px 50px;
+
+    ul {
+        margin: 12px 0;
+        list-style: disc inside;
+    }
+
+    li {
+        margin-left: 24px;
+    }
+
+    .tab-bar-horizontal { margin-bottom: 25px; }
+
+    code {
+        max-width: 870px;
+    }
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+h2 {
+    margin: 0;
+}
+
+h3 {
+    margin: 50px 0 0;
+}
+
+h4 {
+    margin: 36px 0 12px;
+}
+
+h5 {
+    @include fontSize(15px);
+    text-transform: uppercase;
+    color: $dark-blue;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+h6 {
+    @include fontSize(14px);
+    font-weight: 300;
+    margin: 3px 0 35px 0;
+}
+
+p {
+    margin: 8px 0 8px;
+}
+
+em {
+    margin-top: 12px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: $gray-200;
+    margin: 40px 0;
+}
+
+ul {
+    @include fontSize(16px);
+    line-height: 1.5;
+}
+
+ol {
+    @include fontSize(16px);
+    line-height: 1.5;
+}
+
+.sample-component {
+    margin: 20px 0;
+}
+
+hc-subnav {
+    padding: 20px;
+}
+
+.api-table {
+    width: 100%;
+    @include fontSize(13px);
+
+    thead > th {
+        background-color: $charcoal-blue;
+        color: $white;
+        padding: 3px 15px;
+    }
+
+    th {
+        font-weight: 600;
+    }
+
+    tbody > tr > {
+        td, th {
+            border-bottom: 1px dashed $gray-200;
+            padding: 1em 5px;
+            vertical-align: middle;
+        }
+    }
+
+    .type-label {
+        color: $gray-500;
+        display: block;
+        @include fontSize(11px);
+        line-height: 1.5;
+    }
+
+    em {
+        @include fontSize(13px);
+    }
+
+    ul {
+        list-style: none;
+    }
+}
