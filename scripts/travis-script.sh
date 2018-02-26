@@ -18,4 +18,6 @@ elif is_e2e; then
     npm run e2e
 elif is_lib_build; then
     npm run lib:build
+elif is_demo_deploy; then
+    npm run demo:deploy
 fi

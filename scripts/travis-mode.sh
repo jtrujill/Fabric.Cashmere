@@ -19,3 +19,7 @@ is_e2e() {
 is_lib_build() {
     [[ "${PHASE}" = lib_build ]]
 }
+
+is_demo_deploy() {
+    [[ "${PHASE}" = demo_deploy ]]
+}

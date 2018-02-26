@@ -13,6 +13,7 @@
         "ci:test": "ng test --single-run --code-coverage --no-progress",
         "lib:build": "node lib/build.js",
         "release": "ng build --target production --build-optimizer",
+        "demo:deploy": "ng build --prod --no-progress --base-href $BASE_HREF",
         "lint": "ng lint",
         "e2e": "ng e2e",
         "verify": "node lib/build.js --local"

@@ -10,13 +10,13 @@ addons:
 
 jobs:
   include:
-    - env: "PHASE=lint"
-    - env: "PHASE=aot"
-    - env: "PHASE=unit"
-    - env: "PHASE=lib_build"
-#    - env: "PHASE=e2e"
+    - stage: Build and Test
+      - env: "PHASE=lint"
+      - env: "PHASE=unit"
+      - env: "PHASE=aot"
+      - env: "PHASE=lib_build"
     - stage: GitHub Release
-      env: "PHASE=aot"
+      env: "PHASE=demo_deploy"
       deploy:
         provider: pages
         skip_cleanup: true
