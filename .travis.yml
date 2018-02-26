@@ -15,6 +15,13 @@ jobs:
     - env: "PHASE=unit"
     - env: "PHASE=lib_build"
 #    - env: "PHASE=e2e"
+    - stage: GitHub Release
+      script: echo "Deploying to GitHub releases ..."
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        github-token: $GITHUB_TOKEN
+        local-dir: dist
 
 install:
   - npm install
@@ -25,9 +32,3 @@ script:
 cache:
   directories:
     - ./node_modules/
-
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github-token: $GITHUB_TOKEN
-  local-dir: dist
