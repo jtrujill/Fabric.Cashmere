@@ -10,11 +10,10 @@ addons:
 
 jobs:
   include:
-    - stage: Build and Test
-      - env: "PHASE=lint"
-      - env: "PHASE=unit"
-      - env: "PHASE=aot"
-      - env: "PHASE=lib_build"
+    - env: "PHASE=lint"
+    - env: "PHASE=unit"
+    - env: "PHASE=aot"
+    - env: "PHASE=lib_build"
     - stage: GitHub Release
       env: "PHASE=demo_deploy"
       deploy:
