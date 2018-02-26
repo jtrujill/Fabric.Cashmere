@@ -16,9 +16,7 @@ jobs:
     - env: "PHASE=lib_build"
 #    - env: "PHASE=e2e"
     - stage: GitHub Release
-      script: echo "Deploying to GitHub releases ..."
-      env:
-        - "PHASE=aot"
+      env: "PHASE=aot"
       deploy:
         provider: pages
         skip_cleanup: true
