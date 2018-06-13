@@ -8,8 +8,10 @@ fi
 # Grab package version set by semantic release
 PACKAGE_VERSION=$1
 
+ls
+
 # Replace package.json version with generated version
-sed -i "" -E "s/(\"version\":[[:space:]]*\").+(\")/\1${PACKAGE_VERSION}\2/g" package.json
+sed -i -E "s/(\"version\":[[:space:]]*\").+(\")/\1${PACKAGE_VERSION}\2/g" package.json
 
 # Update package-lock.json version also
-sed -i "" -E "s/(\"version\":[[:space:]]*\").+(\")/\1${PACKAGE_VERSION}\2/g" package-lock.json
+sed -i -E "s/(\"version\":[[:space:]]*\").+(\")/\1${PACKAGE_VERSION}\2/g" package-lock.json

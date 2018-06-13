@@ -13,7 +13,7 @@ npm run build
 npm run test:unit
 
 # Publish code coverage to Coveralls
-cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+# cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
 
 # Publishing to NPM
 npx semantic-release
