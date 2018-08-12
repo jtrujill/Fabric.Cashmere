@@ -1,0 +1,11 @@
+button {
+    margin: 10px;
+}
+
+.approve {
+    color: #00a859;
+}
+
+.trash {
+    color: #aaaaaa;
+}
